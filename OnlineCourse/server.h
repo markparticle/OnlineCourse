@@ -12,8 +12,6 @@ class Server {
 public:
     Server();
 
-    ~Server();
-
     void Init();
 
     void Start();

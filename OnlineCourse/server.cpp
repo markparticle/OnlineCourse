@@ -3,8 +3,10 @@
  * @Date         : 2020-05-24
  * @copyleft GPL 2.0
  */
-#include "utils.h"
+
 #include "server.h"
+#include "utils.h"
+
 
 
 Server::Server()
@@ -12,14 +14,9 @@ Server::Server()
      serverAddr_.sin_family = AF_INET;
      serverAddr_.sin_port = htons(SERVER_PORT);
      serverAddr_.sin_addr.s_addr = INADDR_ANY;
-     //serverAddr_.sin_addr.s_addr = inet_addr(SERVER_IP);
      socketFd_ = 0;
+     Init();
      Start();
- }
-
- Server::~Server()
- {
-     Close();
  }
 
  void Server::Init()
@@ -58,13 +55,11 @@ Server::Server()
 
  void Server::Start()
  {
-
-     Init();
      while (true) {
          log("accept \n");
-         struct sockaddr_in clientAddress;
-         socklen_t len = sizeof(clientAddress);
-         int connection = accept(socketFd_, (struct sockaddr*)&clientAddress, &len);
+         //struct sockaddr_in clientAddress;
+         //socklen_t len = sizeof(clientAddress);
+         //int connection = accept(socketFd_, (struct sockaddr*)&clientAddress, &len);
      }
      Close();
  }
