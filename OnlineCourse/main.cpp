@@ -1,3 +1,8 @@
+/*
+ * @Author       : mark
+ * @Date         : 2020-05-25
+ * @copyleft GPL 2.0
+ */
 
 
 
@@ -6,6 +11,6 @@
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR lpCmdLine, int nCmdShow) {
 	MainWindow courseWindows(hInstance);
-	Server server;
+	//Server server;
 }
 

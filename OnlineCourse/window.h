@@ -8,17 +8,24 @@
 
 #include <Windows.h>
 #include <tchar.h>
-#include <vector>
 #include <fstream>
 #include <sstream>
 #include <atlstr.h>
 
-
+enum WindowTag
+{
+	LoginButtonTag = 1, 
+	UserNameInputTag,
+	UserPasswordInputTag,
+};
 
 class MainWindow
 {
-
 public:
+
+	//INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam);
+	//LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+
 	MainWindow(HINSTANCE hInstance);
 	void MyReisterClass();
 	void InitInstance();
